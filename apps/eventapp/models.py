@@ -42,7 +42,7 @@ class Event(models.Model):
     )
     
     # Timestamp (UTC, enforced by model)
-    timestamp = models.DateTimeField(db_index=True)
+    timestamp = models.DateTimeField(auto_now_add=True,db_index=True)
     created_at = models.DateTimeField(auto_now_add=True, db_index=True)
     
     # Payload as JSON
